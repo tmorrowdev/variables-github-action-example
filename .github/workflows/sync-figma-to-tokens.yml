@@ -8,8 +8,8 @@ on:
 
 jobs:
   sync-figma-to-tokens:
-  runs-on: self-hosted    
-  permissions:
+    runs-on: ubuntu-latest
+    permissions:
       # Need to be able to create new branches and commits
       contents: write
       pull-requests: write
