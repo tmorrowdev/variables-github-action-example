@@ -8,8 +8,8 @@ on:
 
 jobs:
   sync-figma-to-tokens:
-    runs-on: ubuntu-latest
-    permissions:
+  runs-on: self-hosted    
+  permissions:
       # Need to be able to create new branches and commits
       contents: write
       pull-requests: write
@@ -17,7 +17,7 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18.16.0'
+          node-version: '20'
 
       - name: Set NPM version
         run: npm install -g npm@9.5.1
